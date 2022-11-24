@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>2d Array's</title>
+  </head>
+  <body>
+    <div class="box">
+      <h1 class="heading">2D Arrays</h1>
+
+      <div class="container">
+        
+        <div class="matrix">
+          <p >
+            <span id="array">[</span>
+            <span id="array1">[2,3,4] </span>
+          </p>
+          <p id="array2">[2,3,4]</p>
+          <p>
+            <span id="array3">[2,3,4] </span>
+            <span id="array">]</span>
+          </p>
+        </div>
+
+        <div class="plus">
+          <p>+</p>
+        </div>
+
+        <div class="matrix">
+          <p>
+            <span id="array">[</span>
+            <span id="array11">[2,3,4]</span>
+          </p>
+          <p id="array12">[2,3,4]</p>
+          <p>
+            <span id="array13">[2,3,4] </span>
+            <span id="array">]</span>
+          </p>
+        </div>
+        
+        <div class="plus">
+          <p>=</p>
+        </div>
+
+        <div class="matrix">
+          <p id="result1">
+              <span id="array">[</span>
+              <span id="result1">[0,0,0]</span>
+            </p>          
+            <p id="result2">[0,0,0]</p>          
+            <p>
+              <span id="result3">[0,0,0]</span>
+              <span id="array">]</span>
+            </p>          
+        </div>
+      </div>
+     
+      <div class="inner-box">
+        <form onclick="Add(); return false">
+          <button>Add</button>
+        </form>
+        
+        <form onclick="Sub(); return false">
+          <button>Substract</button>
+        </form>
+        
+        <form onchange="clear(); return false">
+          <button>Clear</button>
+        </form>
+      </div>
+      
+    
+    </div>
+    <script>
+      // console.log(num, typeof num);
+      let item1=JSON.parse(document.querySelector("#array1").innerHTML)
+      let item2=JSON.parse(document.querySelector("#array2").innerHTML)
+      let item3=JSON.parse(document.querySelector("#array3").innerHTML)
+      let array1=[item1,item2,item3]
+      
+      let item4=JSON.parse(document.querySelector("#array11").innerHTML)
+      let item5=JSON.parse(document.querySelector("#array12").innerHTML)
+      let item6=JSON.parse(document.querySelector("#array13").innerHTML)
+      let array2=[item4,item5,item6]
+      
+      let result1=[],result2=[],result3=[]
+      
+      
+      let sum=0;
+      let sub=0;
+
+
+      function Add() {
+        for(let i;i<array1.length;i++){
+          for(let j;j<array1[i].length;j++){
+            if(i===0){
+              result1[j]=array1[i]+array2[j]
+            }
+            if(i===2){
+              result2[j]=array1[i]+array2[j]
+            }
+            if(i===3){
+              result3[j]=array1[i]+array2[j]
+            }
+          }
+        }
+
+      }
+      
+      function Sub() {
+
+      }
+
+      function clear(){
+
+        document.querySelector("#result1").innerHTML='[0,0,0]'
+        document.querySelector("#result2").innerHTML='[0,0,0]'
+        document.querySelector("#result3").innerHTML='[0,0,0]'
+      }
+
+    </script>
+  </body>
+</html>
