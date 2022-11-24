@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(90deg, hsl(287, 100%, 46%) 10%, #b8e70c 100%);
+  background: linear-gradient(90deg, hsl(151, 100%, 46%) 10%, #0ce7dc 100%);
   z-index: -1;
   font-family: "Poppins", sans-serif;
 }
@@ -81,6 +81,6 @@ span .array{
 
 .box button:hover {
   color: #fff;
-  background: linear-gradient(90deg, hsl(287, 100%, 46%) 10%, #b8e70c 100%);
+  background: linear-gradient(90deg, hsl(151, 100%, 46%) 10%, #0ce7dc 100%);
   border:1px solid transparent !important;
 }
